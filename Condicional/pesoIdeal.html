@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/js.png">
+
+
+    <title >Calculando seu IMC</title>
+</head>
+<body>
+    
+     <img src="img/pesoideal.jpg" alt="">
+    <form>
+       
+
+        <h1>Peso Ideal</h1>
+
+        <p>
+            Digite seu Nome
+            <input type="text" id="inNome" placeholder="Digite Seu Nome ">
+        </p>
+
+
+        <p>
+          Informe seu Sexo 
+          <input type="radio" id="inMasculino" name="sexo" required> Masculino
+          <input type="radio" id="inFeminino" name="sexo" required> Feminino
+        </p>
+
+          <p>
+          Digite sua Altura
+          <input type="number" id="inAltura"  step="0.01" min="0"  placeholder="Digite sua Altura">
+         </p>
+
+           <input type="submit" value="Calcular IMC">
+           <input type="reset" value="Limpa Tela" >
+        
+
+
+    </form>
+    
+   
+    <h3></h3>
+
+   <script src="js/pesoIdeal.js"></script>
+    
+</body>
+</html>

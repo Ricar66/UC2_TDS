@@ -49,5 +49,5 @@ frm.addEventListener("submit", (e) => {
     // agora funciona porque valorTotal existe fora do for
     res4.innerText = `Total pago com juros: R$ ${valorTotal.toFixed(2)}`;
 
-    e.preventDefault();
+     
 });
