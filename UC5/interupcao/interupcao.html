@@ -1,0 +1,24 @@
+<script>
+    alert("Digite 0 para sair")
+
+    do{
+        const num = Number(prompt("Numero: "));
+
+        if(num === 0 || isNaN(num)){
+            const sair = confirm("Confirma Saida")
+            if(sair){
+                break        // Para o programa
+            }else{
+                continue    //volta ao inicio do laço 
+            }
+        }
+
+        if(num % 2 === 0 ){
+            alert(`O dobro do numero é ${num*2}`)
+        }else{
+            alert(`O triplo do numero é ${num*3}`)
+        }
+    }while(true)
+
+    alert("Tchau.....")
+</script>
