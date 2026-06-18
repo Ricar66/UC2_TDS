@@ -1,0 +1,1 @@
+console.log("Programa Anos de copa do mundo. Digite 0 para sair")

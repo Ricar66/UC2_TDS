@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="inage/img" href="js/css/img/js.png" />
+    <link rel="stylesheet" href="js/css/style.css" />
+    <title>COntas do Mes</title>
+  </head>
+  <body>
+    <img src="img/contas1.jpg" alt="Contas a Pagar" class="alta" />
+    <h1>Programas contas do mes</h1>
+
+    <form>
+        <p>Descrição da contas
+            <input type="text" id="inDescricao" required>
+        </p>
+        <p>Valor a pagar
+            <input type="number" step="0.01" id="inValor" min="0" required>
+        </p>
+        <input type="button" value="Registrar Conta" onclick="contas()">
+    </form>
+
+    <pre id="outResp1"></pre>
+    <pre id="outResp2"></pre>
+
+    <script src="js/contasdomes.js"></script>
+  </body>
+</html>
