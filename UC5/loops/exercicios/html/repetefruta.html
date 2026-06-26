@@ -1,0 +1,34 @@
+<!-- a) Elaborar um programa que leia o nome de uma fruta e um número. O programa deve repetir
+a exibição do nome da fruta, de acordo com o número informado. Utilize o * para separar 
+os nomes.
+Use o arquivo repetefruta.html
+Crie o arquivo repeteFruta.js
+Use a imagem exerc.jpg -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Repetindo frutas</h1>
+
+    <form>
+      <p>
+        Digite o nome da fruta
+        <input type="text" id="inFruta" />
+      </p>
+      <p>
+        Digite o valor de vezes que afruta ira aparecer
+        <input type="number" id="inNumero" min="1" />
+      </p>
+     <input type="button" value="Enviar" onclick="frutas()">     
+    </form>
+    <h3></h3>
+
+
+    <script src="../js/repeteFruta.js"></script>
+  </body>
+</html>

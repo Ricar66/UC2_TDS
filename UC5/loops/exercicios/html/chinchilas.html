@@ -1,0 +1,31 @@
+<!-- b) Digamos que o número de chinchilas de uma fazenda triplica a cada ano, após o primeiro
+ano. Elaborar um programa que leia o número inicial de chinchilas e anos e informe ano a 
+ano o número médio previsto de chinchilas da fazenda. O número inicial de chinchilas deve
+ser maior ou igual a 2 (um casal). -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Numero de chinchilas</h1>
+
+    <form>
+        <p>Digite o numero de chincilas
+        <input type="number" min="2" id="inValor">
+        </p>
+        <p>Digite o numero de anos
+        <input type="number" min="1" id="inAno">
+        </p>
+        <input type="button" value="Enviar" onclick="anos()">
+    </form>
+
+    <h3></h3>
+
+    <script src="../js/chinchilas.js"></script>
+</body>
+</html>
