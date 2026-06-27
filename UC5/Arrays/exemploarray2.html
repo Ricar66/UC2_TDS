@@ -1,0 +1,18 @@
+<script>
+    const letras = ["A", "B", "C", "D", "E"]  //declra e define conteudo inicial do array
+    
+    //Fatia o array
+    const letras2 = letras.slice(1, 3) //Pega todos os indices no meio menos o 2 indice declarado
+    console.log(letras2)
+
+    const letras3 = letras.slice(-2)   //obtem as 2 ultimas letras        
+    console.log(letras3)
+    
+    const letras4 = letras.slice(0, -1)      // Pega todos os indices menos o final
+    console.log(letras4)
+
+
+    const retira = letras.splice(2, 1); //Remove a partir da posição 2, 1 elemento
+    console.table(letras)
+    console.log(retira)
+</script>
