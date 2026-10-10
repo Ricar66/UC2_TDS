@@ -9,27 +9,33 @@ body{
     padding: 20px;
 }
 
-.azul{
-    z-index: 0;
+span{
+    display: inline-block;
     position: relative;
+    z-index: 2;
+}
+
+.azul{
     background-color: blue;
-    display: block;
-    width: 500px;
-    height: 130px;;
-    border-radius: 30px 30px 0px 0px;
+    height: 130px;
+    background-image: linear-gradient(135deg, blue, #6610f2);
+    
 
     
 }
 
-img{
-    z-index: 1;
+.header{
     position: relative;
+}
+
+img{
     width: 120px;
     height: 120px;
     margin: -60px 0px 10px 0px;
     text-align: center;
     border-radius: 100px;
     border: 3px solid black ;
+    object-fit: cover;
 }
 
 h3{
@@ -46,6 +52,7 @@ h3{
     text-align: center;
     border-radius: 30px;
     box-shadow: 0px 4px 6px ;
+    overflow: hidden;
     
 }
 
@@ -106,9 +113,10 @@ div .redeSociais{
 
 
 .card .btn{
-     width: 200px;
+     width: 220px;
      height: 50px ;
      margin-top: 10px;
+     margin-right: 4%;
      background-color: blue;
      border-radius: 10px;
      display: inline;
@@ -122,7 +130,7 @@ div .redeSociais{
 
 .btn2{
     background-color: white;
-     width: 200px;
+     width: 220px;
      height: 50px ;
      border-radius: 10px;
      font-weight: bold;
