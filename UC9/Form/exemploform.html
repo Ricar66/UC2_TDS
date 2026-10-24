@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Texto Padrao -->
+     <input type="text" id="nome" name="noeme" placeholder="Digite seu nome" required>
+
+    <!-- Senha Oculta os caracteres digitados -->
+    <input type="password" id="senha" name="senha" minlength="8" placeholder="Digite sua senha" required>
+    
+    <!-- Email (Velida o @ e dominio automaticamente) -->
+    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+    <!-- Numero (Aceita apenas numeros, com limite minimo e maximo, e passo de incremento) -->
+    <input type="number" id="numero" name="numero" min="0" max="100" step="1" placeholder="Digite um número" required>
+
+    <!-- Telefone abre o teclado numerico no celular -->
+    <input type="tel" id="telefone" name="telefone" pattern="[0-9]{11}" placeholder="Digite seu telefone" required>
+
+    <!-- Datas -->
+    <input type="date" id="data" name="data" required>
+
+    <!-- Cores ele abre o sistema nativo do sistema operacional para escolher a cor -->
+    <input type="color" id="cor" name="cor" required>
+
+    <!-- Arquivo (Aceita apenas arquivos com extensões especificas) -->
+    <input type="file" id="arquivo" name="arquivo" accept=".jpg,.png,.pdf" required>
+
+    <!-- Controle Deslizante (Range) -->
+    <input type="range" id="deslizante" name="deslizante" min="0" max="100" step="1" required>
+
+    <input type="radio" id="opcao1" name="opcao" value="opcao1" checked>
+    <label for="opcao1">Opção 1</label>
+
+    <input type="radio" id="opcao2" name="opcao" value="opcao2" >
+    <label for="opcao2">Opção 2</label>
+    
+
+    <input type="checkbox" id="termos" name="termos" required>
+    <label for="termos">Aceito os termos e condições</label>
+
+    
+    <!-- para listas de seleção, você pode usar a tag <select> junto com a tag <option> para criar uma lista suspensa. Aqui está um exemplo de como criar uma lista de seleção para escolher um país: -->
+    <label for="pais">País:</label>
+    <select id="pais" name="pais" required>
+        <option value="" disabled selected>Selecione um país</option>
+        <option value="brasil">Brasil</option>
+        <option value="estados-unidos">Estados Unidos</option>
+        <option value="canada">Canadá</option>
+        <option value="mexico">México</option>
+    
+     <!-- Criar uma lista de sugestões para o usuário digitar o país preferido, usando a tag <datalist> junto com a tag <input>. Aqui está um exemplo de como criar uma lista de sugestões para países:    -->
+    <label for="pais">Digite o pais preferido</label>
+    <input list="paises" id="pais" name="pais" >    
+   <datalist id="paises">
+        <option value="Brasil">
+        <option value="Estados Unidos">
+        <option value="Canadá">
+        <option value="México">
+    </datalist>     
+</body>
+</html>

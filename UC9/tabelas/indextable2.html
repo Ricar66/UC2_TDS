@@ -1,0 +1,121 @@
+ 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Vendas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        /* container para responsividade. permite rolagem em telas pequenas */
+        .table-container {
+            overflow-x: auto; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .tabela-vendas {
+            border-collapse: collapse;/*  Remove o espaço entre as Bordas */
+            margin: 0;
+            font-size: 0.9em; /* não está em relação a raiz. pensando em responsividade para dispositivos pequenos */
+            min-width: 600px;
+            background-color: #fff;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+        }
+        .tabela-vendas thead tr {
+            background-color: #009879;
+            color: #fff;
+            text-align: left;
+            font-weight: bold;
+        }
+        .tabela-vendas th, td {
+            padding: 12px 15px;
+        }
+        .tabela-vendas tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+        .tabela-vendas tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        .tabela-vendas tbody tr:hover{
+            background-color: #f1f7f5;
+            cursor: pointer;
+        }
+        .tabela-vendas tfoot tr{
+            background-color: #009879;
+            color: #fff;
+            font-weight: bold;
+        }
+       .status{
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-size: 0.85em;
+        font-weight: bold;
+        color: #fff;
+       }
+       .status-pago{
+        background-color: #28a745;
+       }
+         .status-pendente{
+          background-color: #ffc107;
+         }
+         .status-cancelado{
+          background-color: #dc3545;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table class="tabela-vendas">
+            <thead>
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Cliente</th>
+                    <th>Status</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#1001</td>
+                    <td>Alec Cine</td>
+                    <td><span class="status status-pago">Pago</span></td>
+                    <td>R$ 250,00</td>
+                </tr>
+                <tr>
+                    <td>#1002</td>
+                    <td>Vitor Turista</td>
+                    <td><span class="status status-pendente">Pendente</span></td>
+                    <td>R$ 120,50</td>
+                </tr>
+                <tr>
+                    <td>#1003</td>
+                    <td>Stanley Bergamo</td>
+                    <td><span class="status status-pago">Pago</span></td>
+                    <td>R$ 450,00</td>
+                </tr>
+                <tr>
+                    <td>#1004</td>
+                    <td>João Eduardo</td>
+                    <td><span class="status status-cancelado">Cancelado</span></td>
+                    <td>R$ 89,90</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Acumulado</td>
+                    <td>R$ 910,40</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
+ 
