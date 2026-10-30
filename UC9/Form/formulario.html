@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="formulario.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Criar conta</h2>
+      <form bindsubmit="" action="/Sucesso" method="POST">
+        <div class="info">
+          <p class="info-container">Nome Completo</p>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+          />
+          <p class="info-container">E-mail</p>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu email"
+            required
+          />
+          <p class="info-container">Digite sa senha</p>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Digite sua senha"
+            required
+          />
+          <p class="info-container">Area de atuação</p>
+          <select
+            class="list-selecao"
+            name="Area de atuacao"
+            id="Area de atuacao"
+          >
+            <option value="" disabled selected>
+              Selecione a area de atuação
+            </option>
+            <option value="frontend">Front-end</option>
+            <option value="backend">Back-end</option>
+            <option value="fullstack">Full Stack</option>
+            <option value="design">UX/UI Design</option>
+          </select>
+
+          <p class="info-container">Tipo de Notificação</p>
+          <div class="radio-container">
+            <input
+              type="radio"
+              id="opcao1"
+              name="opcao"
+              value="opcao1"
+              checked
+            />
+            <label for="opcao1">Email</label>
+            <input type="radio" id="opcao2" name="opcao" value="opcao2" />
+            <label for="opcao2">WhatsApp</label>
+          </div>
+          <div>
+            <input
+              class="termos"
+              type="checkbox"
+              id="termos"
+              name="termos"
+              required
+            />
+            <label for="termos">Aceito os termos e condições</label>
+          </div>
+        </div>
+     
+        
+        <button type="submit">Finalizar cadastro</button>
+      </form>
+    </div>
+  </body>
+</html>

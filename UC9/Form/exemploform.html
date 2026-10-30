@@ -33,13 +33,14 @@
     <!-- Controle Deslizante (Range) -->
     <input type="range" id="deslizante" name="deslizante" min="0" max="100" step="1" required>
 
+    <!-- radio permite selecionar apenas uma opção entre várias. Aqui está um exemplo de como criar dois botões de opção para escolher entre duas opções: -->
     <input type="radio" id="opcao1" name="opcao" value="opcao1" checked>
     <label for="opcao1">Opção 1</label>
-
+   
     <input type="radio" id="opcao2" name="opcao" value="opcao2" >
     <label for="opcao2">Opção 2</label>
     
-
+    <!-- checkbox: permite selecionar uma ou mais opções. Aqui está um exemplo de como criar uma caixa de seleção para aceitar os termos e condições: -->
     <input type="checkbox" id="termos" name="termos" required>
     <label for="termos">Aceito os termos e condições</label>
 
@@ -61,6 +62,31 @@
         <option value="Estados Unidos">
         <option value="Canadá">
         <option value="México">
-    </datalist>     
+    </datalist>
+    
+    <!-- Textos longos e agrupamento
+    Textarea: para mensagens, comentários, biografias. Não possui atributo value -->
+    <label for="bio">Biografia</label>
+    <textarea name="bio" id="bio" rows="4" cols="50" placeholder="Fale sobre você..."></textarea>
+
+    <!-- Grouping: <fieldset> e <legend>
+    Agrupa semanticamente campos relacionados. Excelente para formulários longos. -->
+    <fieldset>
+        <legend>Endereço de Entrega</legend>
+        CEP: <input type="number" name="cep" id="cep">
+        Rua: <input type="text" name="rua" id="rua">
+        Bairro: <input type="text" name="bairro" id="bairro">
+    </fieldset>
+
+
+    <button type="submit">Cadastrar</button>
+    <button type="button" onclick="alert('Ajuda')">Ajuda</button>
+
+    <!-- validação nativa html 5 
+
+    requerid Campo obrigatorio
+    minlength / maxlength Limite de caracteres para textos
+    min / max Limite para numeros e datas
+    pattern Validação via regex (Expressoes regulares) -->
 </body>
 </html>

@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+/* Estilo da página */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Formulário */
+.form-container {
+    width: 400px;
+    padding: 30px;
+    margin: 50px auto;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+label{
+    margin: 0px 10px ;
+}
+
+input{
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+     transition: border-color 0.3s, box-shadow 0.3s;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container{
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    justify-content: left;
+}
+
+.list-selecao{
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-list{
+     margin-top: 10px;
+    margin-bottom: 6px;
+    display: flex;
+    width: 100%;
+    color: black;
+    justify-content: left;
+}
+
+div .radio-container{
+   display: flex;
+   margin-bottom: 20px;
+}
+
+
+button{
+    width: 340px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+}
+
+button:hover{
+    background-color: #ccc;
+}
+
+input:hover {
+    border: 1px solid blue;
+    transition: 0.3s;
+}
+
+select:hover {
+    border: 1px solid blue;
+    transition: 0.3s;
+}
+
+input:focus {
+    border: 1px solid blue;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
+}
+
