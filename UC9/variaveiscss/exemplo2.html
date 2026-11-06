@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de tema</title>
+    <style>
+        /* Variaveis globais para o tema claro */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --card-bg: #f1f5f9;
+            --btn-bg: #2563eb;
+            --btn-text: #ffffff;
+        }
+        /* Variaveis globais para o tema escuro */ 
+        [data-theme="dark"] {
+            --bg-color: #000000;
+            --text-color: #f9fafb;
+            --card-bg: #1f2937;
+            --btn-bg: #3b82f6;
+            --btn-text: #ffffff;
+        }
+
+        body{
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .card{
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        button{
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover{
+            background-color: var(--btn-bg-hover);
+            color: var(--btn-text-hover);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Painel de Controle</h2>
+        <p>Clique no botão para alterar o tema da pagina</p>
+        <button class="toogleTheme">Alterar Tema</button>
+    </div>
+
+    <script>
+        const button = document.querySelector('.toogleTheme');
+        button.addEventListener('click', () =>{
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+
+        })
+    </script>
+</body>
+</html>
