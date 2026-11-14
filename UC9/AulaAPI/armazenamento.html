@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenamento de dados Html 5</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f9;
+        }
+
+        .box{
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input, button{
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Web Storage (localStorage e sessionStorage) - Multiplos Nomes</h2>
+        <input type="text" id="nomeInput" placeholder="Digite seu nome">
+        <button onclick="salvarLocal()">Salvar</button>
+        <button onclick="lerLocal()">Ler</button>
+        <p id="resultadoLocal"></p>
+    </div>
+
+    <script>
+        function salvarLocal(){
+            const nome = document.getElementById('nomeInput').value.trim().toLowerCase(); // Obtém o valor do input e remove espaços em branco
+
+            if(!nome) {
+                alert('Por favor, digite um nome antes de salvar.');
+                return;
+            }
+
+            let Nomes = JSON.parse(localStorage.getItem('usuarios')) || []; // Recupera o array existente ou cria um novo se não existir
+
+            Nomes.push(nome); // Adiciona o novo nome ao array existente
+            localStorage.setItem('usuarios', JSON.stringify(Nomes)); // Salva o array atualizado no localStorage
+            alert('Nome salvo no localStorage!'); // Mensagem de confirmação
+            document.getElementById('nomeInput').value = ''; // Limpa o campo de entrada
+        }
+
+        function lerLocal(){
+            // pegar o item 
+            const nomeBuscado = document.getElementById('nomeInput').value.trim().toLowerCase(); // Obtém o valor do input e remove espaços em branco
+            const resultado = document.getElementById('resultadoLocal'); // Elemento onde o resultado será exibido
+
+            if(!nomeBuscado) {
+                alert('Por favor, digite um nome para buscar.');
+                return;
+            }
+
+            const nomes = JSON.parse(localStorage.getItem('usuarios')) || []; // Recupera o array existente ou cria um novo se não existir
+            const nomeEncontrado = nomes.includes(nomeBuscado); // Verifica se o nome buscado está no array
+            
+
+            if(nomeEncontrado){
+                resultado.textContent = `O nome "${nomeBuscado}" foi encontrado no localStorage.`;
+            } else {
+                resultado.textContent = `O nome "${nomeBuscado}" não foi encontrado no localStorage.`;
+            }
+
+        }
+
+ 
+    </script>
+</body>
+</html>
