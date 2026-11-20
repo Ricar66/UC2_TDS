@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 30px;
+      }
+
+      button{
+        padding: 10px;
+        margin: 10px 0;
+        display: block;
+      }
+    </style>
+</head>
+<body>
+    <h2>Geolocation & Web Notifications</h2>
+
+    <button onclick="obterLocalizacao()">Obter localização GPS</button>
+    <p id ="geoResult"></p>
+
+    <button onclick="pedirNotificacao()">Enviar notificação</button>
+</body>
+
+<script>
+    // Geolocation API
+    function obterLocalizacao(){
+        const p = document.getElementById('geoResult')
+        if(!navigator.geolocation){
+            p.innerText = `Geolocalização não e suportada por seu navegador`;
+            return
+        }
+
+        p.innerText = `Carregando...`
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                p.innerText = `Latitude: ${pos.coords.latitude.tofixed(4)}, Longitude: ${pos.coords.longitude.tofixed(4)}`;
+            },
+
+            () => {
+                p.innerText = 'Permissão negado ou erro ao obeter localização'
+            }
+        )
+    }
+
+    // Web notification API
+
+    async function pedirNotificacao() {
+        // aguardando a requisição de permissao
+        let perm = await Notification.requestPermission();
+        if(perm === "granted"){
+            new Notification('Olá', {
+                body: 'Esta é uma notigicação nativa do HTML5'
+            })
+        }else{
+            alert('Essa notificação não é permitida')
+        }
+    }
+</script>
+</html>
